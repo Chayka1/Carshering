@@ -1,0 +1,52 @@
+﻿<Window x:Class="CarSharing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Car Sharing" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Марка:"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Name="BrandTextBox" Margin="5"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Модель:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="ModelTextBox" Margin="5"/>
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Цена за час:"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="PriceTextBox" Margin="5"/>
+
+        <Button Grid.Row="3" Grid.Column="1" Content="Добавить машину" Click="AddCarButton_Click" Margin="5"/>
+
+        <Separator Grid.Row="4" Grid.ColumnSpan="3"/>
+
+        <Label Grid.Row="5" Grid.Column="0" Content="Марка:"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Name="BrandTakeTextBox" Margin="5"/>
+
+        <Label Grid.Row="6" Grid.Column="0" Content="Модель:"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Name="ModelTakeTextBox" Margin="5"/>
+
+        <Button Grid.Row="7" Grid.Column="1" Content="Взять в прокат" Click="TakeACarButton_Click" Margin="5"/>
+
+        <Separator Grid.Row="8" Grid.ColumnSpan="3"/>
+
+        <Label Grid.Row="9" Grid.Column="0" Content="Список доступных машин:" Grid.ColumnSpan="3"/>
+
+        <TextBox Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="3" Name="AvailableCarsTextBox" Margin="5" Height="200"/>
+
+        <Button Grid.Row="11" Grid.Column="1" Content="Показать список" Click="ListOfAvailableCarsButton_Click" Margin="5"/>
+    </Grid>
+</Window>
